@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Usuário </title>
+</h:head>
+<h:body>
+   <h:dataTable value="#{usuarioBean.usuarios}" var="usuario" rules="rows">
+	
+			<f:facet name="header"></f:facet>
+				
+				<h:column>
+				<f:facet name="header">Nome</f:facet>
+				<h:outputText value="${usuario.nome}" />
+				</h:column>
+				
+				<h:column>
+				<f:facet name="header">Matrícula</f:facet>
+				<h:outputText value="${usuario.matricula}" />
+				</h:column>	
+				
+				<h:column>
+				<f:facet name="header">Data de Nascimento</f:facet>
+				<h:outputText value="${usuario.nascimento}" />
+				</h:column>
+								
+		</h:dataTable>
+
+</h:body>
+</h:html>

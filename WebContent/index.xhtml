@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> Usuário </title>
+</h:head>
+<h:body>
+    <h:form>
+			<h:inputText value="${usuarioBean.a}">
+			</h:inputText>
+			<h:commandButton id="listar" 
+				action="${usuarioBean.listarUsuarios}" 
+				value="Enviar"/>
+			
+	</h:form>
+
+</h:body>
+</h:html>
