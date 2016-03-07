@@ -111,20 +111,3 @@ public class UsuarioDAO {
 		return listaUsu;
 	}
 }
-/*
-		}
-
-	GeneralDAO genericDao = new GeneralDAO();
-	public ResultSet rs;
-
-	public UsuarioDAO() {
-	}
-
-	public ArrayList<Usuario> consultaUser() {
-		
-		ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-
-
-		return usuarios;
-	}
-}*/
