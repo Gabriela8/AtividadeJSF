@@ -1,6 +1,7 @@
 package src.br.edu.ifpb.atividadejsf2.managedBean;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -15,17 +16,15 @@ public class UsuarioBean {
 	
 	private Usuario usuario;
 	private UsuarioDAO usuarioDao;
-	private ArrayList<Usuario> usuarios;
-	
-private String a;
+	private List<Usuario> usuarios;
 	
 	public UsuarioBean() {
 	
 		this.usuario = new Usuario();
 		this.usuarioDao = new UsuarioDAO();
 		this.usuarios = new ArrayList<Usuario>();
-		this.a = " ";
 	}
+	
 	public Usuario getUsuario() {
 		return usuario;
 	}
@@ -38,7 +37,7 @@ private String a;
 	public void setUsuarioDao(UsuarioDAO usuarioDao) {
 		this.usuarioDao = usuarioDao;
 	}
-	public ArrayList<Usuario> getUsuarios() {
+	public List<Usuario> getUsuarios() {
 		return usuarios;
 	}
 	public void setUsuarios(ArrayList<Usuario> usuarios) {
@@ -46,15 +45,15 @@ private String a;
 	}
 	public String listarUsuarios(){
 		
-		usuarios = usuarioDao.consultaUser();
+		try {
+		
+			usuarios = usuarioDao.getUsuarios();
+		
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+		}
 		
 		return "exibeUsuario.xhtml";
 	}
-	public String getA() {
-		return a;
-	}
-	public void setA(String a) {
-		this.a = a;
-	}
 }
-
